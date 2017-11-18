@@ -99,7 +99,7 @@ namespace HookingAssembly
             //
             // We need tree methods per target method:
             //  target - A method to be hooked. It normally exists out side of
-            //           out code.
+            //           our code.
             //  handler - A detour method to be called instead of the target
             //            method after a hook is installed.
             //  trampoline - A method used to call an original of the target

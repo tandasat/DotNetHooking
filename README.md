@@ -13,9 +13,10 @@ The high level flow of this code is:
  2. The HookScanContent class is instantiated registering an assembly load
     event handler
  3. When System.Management.Automation, which contains implementation of our
-    target method "ScanContent", locates its native code address and installs
-    a hook on it to redirect to the ScanContentHookHandler method
- 4. When PowerShell is executed and the ScanContent is called, our
+    target method "ScanContent", is loaded, this assembly locates its native
+    code address and installs a hook on it to redirect to the
+    ScanContentHookHandler method
+ 4. When PowerShell content is executed and the ScanContent is called, our
     ScanContentHookHandler is executed instead of original ScanContent
 
 Hints
@@ -23,7 +24,7 @@ Hints
 Few things worth noting:
  1. This project targets .NET 2.0. This lets this assembly be loadable on
     practically any platforms since .NET Framework 2.0 is installed by
-    default since Windows 7. Also, such an assembly can be loaded into a
+    default since Windows 7, and such an assembly can be loaded into a
     process using a newer version of .NET Framework. Therefore, such an
     assembly can be loaded into through PowerShell v2 to v5 universally.
  2. This assembly is signed and compiled as a strongly named assembly. This
@@ -38,7 +39,7 @@ Few things worth noting:
 
 Installation
 ----------
-As noted above, this assembly must be registered with GAC, or it located in
+As noted above, this assembly must be registered with GAC or located in
 the same folder as a target executable file (powershell.exe, in our case).
 While registering with GAC will be required in the real use cases, skipping
 registration is more convenient for debugging and testing. The below is the
