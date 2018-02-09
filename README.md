@@ -56,7 +56,7 @@ No GAC Installation (+ testing with locally copied powershell.exe)
  
         > copy C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe . /y
  
- 4. Set environment variable to specify a custome AppDomainManager
+ 4. Set environment variable to specify a custom AppDomainManager
  
         > set APPDOMAIN_MANAGER_ASM=HookingAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c8b8e7ea5047757d, processorArchitecture=MSIL
         > set APPDOMAIN_MANAGER_TYPE=HookingAssembly.CustomeAppDomainManager1
@@ -87,7 +87,7 @@ GAC Installation (+ powershell.exe)
 
         Assembly successfully added to the cache
 
- 4. Set environment variable to specify a custome AppDomainManager
+ 4. Set environment variable to specify a custom AppDomainManager
 
         > set APPDOMAIN_MANAGER_ASM=HookingAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c8b8e7ea5047757d, processorArchitecture=MSIL
         > set APPDOMAIN_MANAGER_TYPE=HookingAssembly.CustomeAppDomainManager1
